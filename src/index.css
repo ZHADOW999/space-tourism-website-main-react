@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@font-face {
+    font-family: barlow-light;
+    src: url(./fonts/Barlow-Light.ttf);
+
+}
+
+@font-face {
+    font-family: barlow-mid;
+    src: url(./fonts/Barlow-Medium.ttf);
+}
+
+@font-face {
+    font-family: barlow-conLight;
+    src: url(./fonts/BarlowCondensed-Light.ttf);
+
+}
+
+@font-face {
+    font-family: bellfair-reg;
+    src: url(./fonts/Bellefair-Regular.ttf);
+}
+
+:root{
+    --text-color:hsl(231, 77%, 90%);
+    --outline-color:rgba(255, 255, 255, 0.078);
+    --color3:rgba(255, 255, 255, 0.25);
+}
+@layer utilities{
+  
+
+    .ham-menu {
+      @apply h-[32px] w-[32px] ml-auto relative z-[4] hover:cursor-pointer lg:hidden;
+    }
+    .ham-menu span {
+      @apply h-[3px] w-[100%]  bg-color-2 rounded-3xl absolute top-1/2  -translate-x-1/2 -translate-y-1/2 transition-all duration-300 ease-in-out;
+    }
+    .ham-menu span:nth-child(1) {
+      @apply top-1/4;
+    }
+    .ham-menu span:nth-child(3) {
+      @apply top-[75%];
+    }
+    .ham-menu.active2 span {
+      @apply bg-color-2;
+    }
+    .ham-menu.active2 span:nth-child(1) {
+      @apply top-1/2 -translate-x-1/2 -translate-y-1/2 rotate-45;
+    }
+    .ham-menu.active2 span:nth-child(2) {
+      @apply opacity-0;
+    }
+    .ham-menu.active2 span:nth-child(3) {
+      @apply -rotate-45 top-1/2  -translate-x-1/2 -translate-y-1/2 ;
+    }
+
+    .nav-list.active2 {
+        @apply absolute right-[0%] ;
+        
+      }
+}  
